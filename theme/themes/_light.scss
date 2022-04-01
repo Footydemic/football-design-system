@@ -1,5 +1,5 @@
-$f-family-primary: 'Fira Sans', sans-serif;
-$f-family-brand: 'Isidora';
+$f-family-primary: 'Roboto', sans-serif;
+$f-family-brand: 'Roboto';
 $f-weight-regular: 400;
 $f-weight-semi: 600;
 $f-weight-bold: 700;
@@ -84,7 +84,7 @@ $f-weight-bold: 700;
 
 @mixin t-body-regular {
   font-family: $f-family-primary;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: $f-weight-regular;
   line-height: 24px;
 }
@@ -215,3 +215,82 @@ $typography: (
     'line-height': 18px,
   )
 );
+
+
+:root {
+  --white: #ffffff;
+  --gray-10: #f8f7f8;
+  --gray-15: #EBE7EB;
+  --gray-40: #e3dfe3;
+  --gray-80: #9e8f9e;
+  --gray-100: #756075;
+  --black-100: #302030;
+  --green: #13a03d;
+}
+
+// PALETTE
+$c-white: #ffffff;
+$c-gray-10: #f8f7f8;
+$c-gray-15: #EBE7EB;
+$c-gray-40: #e3dfe3;
+$c-gray-80: #9e8f9e;
+$c-gray-100: #756075;
+$c-black-100: #302030;
+$c-green-10: #d3f3d5;
+$c-green-100: #13a03d;
+$c-green-110: #068b04;
+
+$uiColors: (
+  "fds-green": $c-green-100,
+);
+
+
+/* GLOBAL TOKENS */
+
+// radius
+$radius-medium: 4px !default;
+
+// icons
+$icon-size-small: 18px !default;
+$icon-size-medium: 24px !default;
+$icon-color-white: $c-white !default;
+$icon-color-dark: $c-black-100 !default;
+
+// text color
+$text-color-primary: $c-black-100 !default;
+$text-color-negative: $c-white !default;
+
+
+/* BUTTON COMPONENT */
+
+// global button settings
+$button-padding: 0 16px !default;
+
+// buttons sizes
+$button-size-small: 34px !default;
+$button-size-medium: 44px !default;
+$button-size-large: 52px !default;
+
+// buttons text sizes
+@mixin button-text-small { @include t-body-small-semibold };
+@mixin button-text-medium { @include t-body-regular };
+@mixin button-text-large { @include t-subtitle-semibold };
+
+// buttons colors for disabled and flat state
+$button-text-color-disabled: $c-gray-80 !default;
+$button-icon-color-disabled: $c-gray-80 !default;
+$button-color-transparent-background: transparent !default;
+$button-color-fill-background-disabled: $c-gray-15 !default;
+$button-color-outline-border-disabled: $c-gray-40 !default;
+
+
+// variant primary
+$button-primary-text: $text-color-negative !default;
+$button-primary-fill-background-default: $c-green-100 !default;
+$button-primary-fill-background-hover: $c-green-110 !default;
+$button-primary-outline-background-default: $c-white !default;
+$button-primary-outline-background-hover: $c-green-10 !default;
+$button-primary-outline-border-default: $c-green-100 !default;
+$button-primary-flat-background-hover: $c-green-10 !default;
+
+

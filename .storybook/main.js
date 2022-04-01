@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    "../src/**/**/*.stories.js"
+    "../stories/*.stories.js"
   ],
   addons: [
     "@storybook/addon-links",
@@ -9,7 +9,7 @@ module.exports = {
       name: '@storybook/preset-scss',
       options: {
         sassLoaderOptions: {
-          additionalData: "@import './src/styles/setup.scss'; @import './src/styles/main.scss';",
+          additionalData: "@import './theme/setup.scss'; @import './theme/main.scss';",
         }
       }
     }

@@ -1,0 +1,67 @@
+
+$break_point1: 320px;
+$break_point2: 480px;
+$break_point3: 640px;
+$break_point4: 768px;
+$break_point5: 980px;
+$break_point6: 1024px;
+$break_point7: 1200px;
+$break_point8: 1370px;
+
+@mixin breakpoint($name, $direction: 'min') {
+  $prop: 'min-width';
+
+  @if $direction == 'min' {
+    $prop: 'min-width'
+  } @else if $direction == 'max' {
+    $prop: 'max-width'
+  } @else {
+    @error "Breakpoint $direction has to be one of: 'min', 'max'"
+  }
+
+  @if $name == 'phone_small' {
+    @media screen and (#{$prop}: $break_point1) {
+      @content;
+    }
+  } @else if $name == 'phone' {
+    @media screen and (#{$prop}: $break_point2) {
+      @content;
+    }
+  } @else if $name == 'phone_big' {
+    @media screen and (#{$prop}: $break_point3) {
+      @content;
+    }
+  } @else if $name == 'tablet' {
+    @media screen and (#{$prop}: $break_point4) {
+      @content;
+    }
+  } @else if $name == 'tablet_big' {
+    @media screen and (#{$prop}: $break_point5) {
+      @content;
+    }
+  } @else if $name == 'desktop_small' {
+    @media screen and (#{$prop}: $break_point6) {
+      @content;
+    }
+  } @else if $name == 'desktop' {
+    @media screen and (#{$prop}: $break_point7) {
+      @content;
+    }
+  } @else if $name == 'desktop_big' {
+    @media screen and (#{$prop}: $break_point8) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$prop}: $name) {
+      @content;
+    }
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}

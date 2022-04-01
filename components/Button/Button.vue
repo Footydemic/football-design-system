@@ -8,10 +8,8 @@
     @click.stop="handleClick"
   >
     <template v-if="icon">
-      <span class="icon-wrapper">
-        <svg class="fds-icon-wrapper" :aria-label="contentDescription">
-          <use :xlink:href="`#${icon}`"></use>
-        </svg>
+      <span class="fds-icon-wrapper">
+        <span class="fds-icon icon" :class="icon" />
       </span>
     </template>
 
@@ -37,7 +35,7 @@ export default {
     },
     variant: {
       type: String,
-      default: "",
+      default: "primary",
     },
     buttonStyle: {
       type: String,
@@ -117,16 +115,14 @@ export default {
 </script>
 
 <style lang="scss">
-.fds-design-system .fds-button {
+.fds-app .fds-button {
   @include button-text-medium;
 
-  background: $button-primary-fill-background-default;
   border-radius: $radius-medium;
   box-sizing: border-box;
   color: $button-primary-text;
   display: block;
   height: $button-size-medium;
-  min-width: 112px;
   outline: none;
   padding: $button-padding;
   position: relative;
@@ -134,8 +130,20 @@ export default {
   text-decoration: none;
   transition: all 0.3s;
 
-  &:hover {
-    background: $button-primary-fill-background-hover;
+  &.fds-button-primary {
+    background: $button-primary-fill-background-default;
+
+    &:hover {
+      background: $button-primary-fill-background-hover;
+    }
+  }
+
+  &.fds-button-primary {
+    background: $button-primary-fill-background-default;
+
+    &:hover {
+      background: $button-primary-fill-background-hover;
+    }
   }
 
   &.fds-button-disabled,
@@ -259,6 +267,8 @@ export default {
   .fds-icon-wrapper {
     height: 24px;
     width: 24px;
+    line-height: 24px;
+    font-size: 18px;
   }
 
   .fds-icon {
