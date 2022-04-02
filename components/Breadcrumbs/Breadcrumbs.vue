@@ -10,7 +10,7 @@
         <span v-else>
           {{ item.text }}
         </span>
-        <span v-if="showIcon(index)" class="icon ion-md-heart" />
+        <span v-if="showIcon(index)" class="icon ion-ios-arrow-forward" />
       </li>
     </ul>
   </div>
@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 .fds-breadcrumbs {
-  @include t-body-regular;
+  @include t-body-2;
 
   color: $c-black-100;
   font-size: 13px;
@@ -69,11 +69,11 @@ export default {
       }
 
       span {
-        color: $c-gray-40;
+        color: $c-gray-100;
       }
 
       .icon {
-        margin: 0 7px;
+        margin: 0 10px 0 8px;
       }
     }
   }

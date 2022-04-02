@@ -1,66 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap&subset=latin-ext');
+
+
+
 $f-family-primary: 'Roboto', sans-serif;
-$f-family-brand: 'Roboto';
+$f-family-brand: 'Rubik';
 $f-weight-regular: 400;
+$f-weight-normal: 500;
 $f-weight-semi: 600;
 $f-weight-bold: 700;
 
-@mixin t-title-1-bold {
+@mixin t-headline {
   font-family: $f-family-brand;
   font-size: 48px;
   font-weight: $f-weight-bold;
   line-height: 68px
 }
 
-@mixin t-title-2-bold {
+@mixin t-text-h1 {
   font-family: $f-family-brand;
   font-size: 37px;
   font-weight: $f-weight-bold;
   line-height: 52px;
 }
 
-@mixin t-title-2-semibold {
-  @include t-title-2-bold();
+@mixin t-text-h2 {
+  @include t-text-h1();
   font-family: $f-family-primary;
   font-size: 36px;
   font-weight: $f-weight-semi;
 }
 
-@mixin t-title-3-bold {
+@mixin t-text-h3 {
   font-family: $f-family-brand;
   font-size: 29px;
   font-weight: $f-weight-bold;
   line-height: 40px;
 }
 
-@mixin t-title-3-semibold {
-  @include t-title-3-bold();
-  font-family: $f-family-primary;
-  font-size: 28px;
-  font-weight: $f-weight-semi;
-}
-
-@mixin t-title-4-bold {
+@mixin t-text-h4 {
+  line-height: 26px;
   font-family: $f-family-brand;
-  font-size: 23px;
-  font-weight: $f-weight-bold;
-  line-height: 32px;
+  font-size: 20px;
+  font-weight: $f-weight-normal;
 }
 
-@mixin t-title-4-semibold {
-  @include t-title-4-bold();
+@mixin t-text-h5 {
+  font-family: $f-family-brand;
+  font-size: 18px;
+  font-weight: $f-weight-normal;
+  line-height: 22px;
+}
+
+@mixin t-text-h6 {
+  @include t-text-h5();
   font-family: $f-family-primary;
   font-size: 22px;
-  font-weight: $f-weight-semibold;
+  font-weight: $f-weight-semi;
 }
 
 @mixin t-title-4-regular {
-  @include t-title-4-bold();
+  @include t-text-h6();
   font-family: $f-family-primary;
   font-size: 22px;
   font-weight: $f-weight-regular;
 }
 
-@mixin t-subtitle-semibold {
+@mixin t-subtitle-1 {
   font-family: $f-family-primary;
   font-size: 18px;
   font-weight: $f-weight-semi;
@@ -68,49 +74,49 @@ $f-weight-bold: 700;
 }
 
 
-@mixin t-subtitle-regular {
+@mixin t-subtitle-2 {
   font-family: $f-family-primary;
   font-size: 18px;
   font-weight: $f-weight-regular;
   line-height: 28px;
 }
 
-@mixin t-body-semibold {
+@mixin t-body-1 {
   font-family: $f-family-primary;
-  font-size: 16px;
-  font-weight: $f-weight-semi;
+  font-size: 15px;
+  font-weight: $f-weight-normal;
   line-height: 24px;
 }
 
-@mixin t-body-regular {
+@mixin t-body-2 {
   font-family: $f-family-primary;
   font-size: 14px;
-  font-weight: $f-weight-regular;
+  font-weight: $f-weight-normal;
   line-height: 24px;
 }
 
-@mixin t-body-small-semibold {
+@mixin t-body-3 {
   font-family: $f-family-primary;
   font-size: 14px;
   font-weight: $f-weight-semi;
   line-height: 22px;
 }
 
-@mixin t-body-small-regular {
+@mixin t-body-4 {
   font-family: $f-family-primary;
   font-size: 14px;
   font-weight: $f-weight-regular;
   line-height: 22px;
 }
 
-@mixin t-caption-semibold {
+@mixin t-caption-1 {
   font-family: $f-family-primary;
   font-size: 12px;
   font-weight: $f-weight-semi;
   line-height: 18px;
 }
 
-@mixin t-caption-regular {
+@mixin t-caption-2 {
   font-family: $f-family-primary;
   font-size: 12px;
   font-weight: $f-weight-regular;
@@ -148,7 +154,7 @@ $typography: (
     'font-weight': $f-weight-semi,
     'line-height': 40px
   ),
-  'title-4-bold': (
+  'text-h6': (
     'font-family': $f-family-brand,
     'font-size': 23px,
     'font-weight': $f-weight-bold,
@@ -234,11 +240,12 @@ $c-gray-10: #f8f7f8;
 $c-gray-15: #EBE7EB;
 $c-gray-40: #e3dfe3;
 $c-gray-80: #9e8f9e;
-$c-gray-100: #756075;
-$c-black-100: #302030;
+$c-gray-100: #767676;
+$c-black-100: #333;
 $c-green-10: #d3f3d5;
 $c-green-100: #13a03d;
 $c-green-110: #068b04;
+$c-purple-100: #a30063;
 
 $uiColors: (
   "fds-green": $c-green-100,
@@ -272,9 +279,9 @@ $button-size-medium: 44px !default;
 $button-size-large: 52px !default;
 
 // buttons text sizes
-@mixin button-text-small { @include t-body-small-semibold };
-@mixin button-text-medium { @include t-body-regular };
-@mixin button-text-large { @include t-subtitle-semibold };
+@mixin button-text-small { @include t-body-2 };
+@mixin button-text-medium { @include t-body-1 };
+@mixin button-text-large { @include t-text-h6 };
 
 // buttons colors for disabled and flat state
 $button-text-color-disabled: $c-gray-80 !default;

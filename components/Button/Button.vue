@@ -231,17 +231,14 @@ export default {
     display: flex;
     justify-content: center;
 
-    .icon-wrapper {
-      display: block;
-      height: 24px;
-      margin-right: 8px;
-      width: 24px;
+    .fds-icon-wrapper {
+      margin-right: 4px;
     }
 
     &.fds-button-icon-content {
       min-width: auto;
 
-      .icon-wrapper {
+      .fds-icon-wrapper {
         margin-right: 0;
       }
     }

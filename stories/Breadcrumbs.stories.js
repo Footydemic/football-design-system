@@ -20,8 +20,12 @@ export const Default = () => ({
           link: "#",
           text: "Competitions",
         },
+        {
+          link: "",
+          text: "Premier League",
+        },
       ],
     }
   },
-  template: `<FdsBreadcrumbs :breadcrumbs="breadcrumbs" />`,
+  template: `<div style="padding: 16px"><FdsBreadcrumbs :breadcrumbs="breadcrumbs" /></div>`,
 })
