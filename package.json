@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build:common": "node ./node_modules/.bin/vue-cli-service build --target lib --name fds --dest dist ./src/components/index.js",
-    "build:library": "LIBRARY=1 node ./node_modules/.bin/vue-cli-service build --target lib --name fds --dest dist/library ./src/components/index.js",
+    "build:common": "node ./node_modules/.bin/vue-cli-service build --target lib --name fds --dest dist ./components/index.js",
+    "build:library": "LIBRARY=1 node ./node_modules/.bin/vue-cli-service build --target lib --name fds --dest dist/library ./components/index.js",
     "build": "npm run build:common && npm run build:library",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",

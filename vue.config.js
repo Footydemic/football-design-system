@@ -6,9 +6,9 @@ module.exports = {
       preProcessor: "scss",
       patterns: [
         !process.env.LIBRARY
-          ? path.resolve(__dirname, "./src/styles/setup.scss")
+          ? path.resolve(__dirname, "./theme/setup.scss")
           : "",
-        path.resolve(__dirname, "./src/styles/main.scss"),
+        path.resolve(__dirname, "./theme/main.scss"),
       ],
       resolveUrl: false,
     },
