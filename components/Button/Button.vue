@@ -232,7 +232,7 @@ export default {
     justify-content: center;
 
     .fds-icon-wrapper {
-      margin-right: 4px;
+      margin-right: 8px;
     }
 
     &.fds-button-icon-content {
@@ -262,8 +262,6 @@ export default {
   }
 
   .fds-icon-wrapper {
-    height: 24px;
-    width: 24px;
     line-height: 24px;
     font-size: 18px;
   }

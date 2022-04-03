@@ -1,7 +1,7 @@
 import FdsButton from "../components/Button/Button.vue"
 
 export default {
-  title: "Components/Button",
+  title: "Atoms/Button",
   parameters: {
     layout: "fullscreen",
   },

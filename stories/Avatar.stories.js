@@ -1,7 +1,7 @@
 import FdsAvatar from "../components/Avatar/Avatar.vue"
 
 export default {
-  title: "Components/Avatar",
+  title: "Atoms/Avatar",
   parameters: {
     layout: "fullscreen",
   },
